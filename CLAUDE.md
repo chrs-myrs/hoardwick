@@ -6,7 +6,7 @@ Hoardwick uses LiveSpec methodology for development.
 
 ### Cleanup Operations
 
-See [CLEANUP.md](CLEANUP.md) for comprehensive cleanup recipes and scenarios.
+See [docs/CLEANUP.md](docs/CLEANUP.md) for comprehensive cleanup recipes and scenarios.
 
 **Emergency space recovery:**
 ```bash
@@ -108,18 +108,24 @@ python3 scripts/scan.py /mnt/share
 ### Project Structure
 ```
 hoardwick/
-├── PURPOSE.md              # Why this exists
+├── README.md               # Quick start and overview
+├── CLAUDE.md               # This file - development guide
+├── docs/                   # Documentation
+│   ├── USAGE.md            # Command reference and workflows
+│   ├── CLEANUP.md          # Cleanup recipes and safety protocols
+│   └── ARCHITECTURE.md     # Specification relationships
 ├── specs/                  # LiveSpec specifications
-│   ├── mission/            # Outcomes and constraints
-│   ├── workspace/          # How we build
-│   ├── strategy/           # Architecture
-│   └── behaviors/          # What system does
+│   ├── 1-requirements/     # Outcomes and constraints
+│   ├── 2-strategy/         # Architecture decisions
+│   ├── 3-behaviors/        # Component specifications
+│   └── workspace/          # Development practices
 ├── scripts/                # Executable Python scripts
 │   ├── scan.py             # Storage scanner
 │   ├── scan.spec.md        # Scanner specification
 │   ├── analyse.py          # Storage analyser
-│   └── analyse.spec.md     # Analyser specification
-├── .livespec/              # LiveSpec framework (gitignored)
+│   ├── analyse.spec.md     # Analyser specification
+│   └── cleanup.py          # Cleanup operations
+├── .livespec/              # LiveSpec framework
 └── generated/              # Generated outputs (gitignored)
     └── hoardwick.db        # SQLite database
 ```
