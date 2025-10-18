@@ -1,6 +1,7 @@
 ---
 criticality: IMPORTANT
 failure_mode: Inconsistent patterns make codebase harder to understand and maintain
+governed-by: .livespec/standard/metaspecs/workspace.spec.md
 ---
 
 # Hoardwick Development Patterns

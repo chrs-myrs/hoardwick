@@ -1,7 +1,9 @@
 ---
 criticality: USEFUL
 failure_mode: Without learning from decisions, cleanup recommendations don't improve
-constrained_by: specs/workspace/patterns.spec.md
+governed-by: .livespec/standard/metaspecs/behavior.spec.md
+guided-by: specs/2-strategy/architecture.spec.md
+constrained-by: specs/workspace/patterns.spec.md
 ---
 
 # Preference Learning System

@@ -1,7 +1,9 @@
 ---
 criticality: USEFUL
 failure_mode: Users don't understand VHDX overhead and waste time trying to compact beyond filesystem limits
-constrained_by: specs/workspace/patterns.spec.md
+governed-by: .livespec/standard/metaspecs/behavior.spec.md
+guided-by: specs/2-strategy/architecture.spec.md
+constrained-by: specs/workspace/workflows.spec.md
 ---
 
 # VHDX Management Behavior

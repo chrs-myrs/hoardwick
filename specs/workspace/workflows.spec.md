@@ -1,6 +1,7 @@
 ---
 criticality: IMPORTANT
 failure_mode: Without clear workflows, development becomes inconsistent and skips critical steps
+governed-by: .livespec/standard/metaspecs/workspace.spec.md
 ---
 
 # Hoardwick Development Workflows
@@ -108,6 +109,22 @@ failure_mode: Without clear workflows, development becomes inconsistent and skip
 - Descriptive messages: What and why (not how)
 - Evolve files: Never create duplicate versions (_v2, _old)
 - Git history: Single source of truth (not filenames)
+
+**Git Repository Setup Workflow:**
+1. Initialize repository: `git init`
+2. Create comprehensive .gitignore:
+   - Exclude personal scan data: `*.db`, `*.sqlite`, `scan.log`, `*.log`
+   - Exclude generated outputs: `generated/`, `.tmp/`, `.scratch/`
+   - Exclude data files: `*.csv`, `*.json` (unless configuration)
+   - Exclude backups: `*.tar`, `*.backup`
+   - **Include** LiveSpec framework: `.livespec/` (NOT gitignored)
+   - **Include** Claude Code settings: `.claude/settings.local.json`
+3. Add remote with correct username (verify hyphens): `git remote add origin https://github.com/username/repo.git`
+4. Initial commit with all framework files
+5. Create GitHub repository before first push
+6. Verify push succeeds: `git push -u origin main`
+
+**Rationale**: Session 3 required fixing .gitignore to include LiveSpec framework and Claude settings. Initial remote URL had wrong username (chrsmyrs vs chrs-myrs).
 
 **Validation:**
   - New features have specs before implementation
