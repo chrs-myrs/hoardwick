@@ -1,0 +1,48 @@
+# LiveSpec framework
+.livespec/
+
+# Temporary and working files
+.tmp/
+.scratch/
+
+# Generated content
+generated/
+
+# Archive
+.archive/
+
+# System files
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+ENV/
+
+# Data analysis outputs
+*.csv
+*.json
+reports/
+
+# Database files (contain personal scan data)
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# Backup archives
+*.tar
+*.tar.gz
+*.backup
+
+# Scan logs (contain personal directory names)
+scan.log
+*.log
